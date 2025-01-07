@@ -35,17 +35,46 @@ namespace C_Basic
             Console.WriteLine("This is SportsWeek");
         }
 
-        
-          public static void Main()
+        public override void CollegeClassShift(string classShift)
+        {
+            Console.WriteLine("It has to be defined by us , not university");
+        }
+
+        //method hiding/shadowing
+        public new void CollegeClassOff() //same "method name" exists in Parent and this hides Parent class similar method , called "Method Hiding/Shadowing"
+        {
+            Console.WriteLine("It is Saturday and Sunday");
+        }
+
+        //using "base" key
+        public void TestBaseKey()
+        {
+            base.TransportInfoUsingBaseKey();
+        }
+
+
+        public static void Main()
         {
             CollegeChild cc = new CollegeChild("St.Xavier's");
             //cc.EmployeeInfo();// this method is private hence can't accessed with child's object
             cc.VacationSchedule();
+            cc.CollegeClassShift("Morning Shift");
+            cc.CollegeClassOff();
+            cc.MainSub();
+            //base.TransportInfoUsingBaseKey();// "base" is not applicable in static method
+            cc.TestBaseKey(); //calling function which is using 'base' key
 
+            Console.WriteLine("****Reference and Instance Concept****");
+            UniversityParent upRef;
+            CollegeChild ccInst = new CollegeChild("CollegeName");
+            upRef = cc;//   "upRef" : is reference of parent created using child's class , this cant access child's pure class but can access overridden method of own
+            upRef.CollegeClassShift("Evening"); // is overridden method so display overridden one
+            upRef.CollegeClassOff(); //shows parent output as methodHiding
+            //upRef.TestBaseKey(); // cant access child's method
 
         }
         //cc.EmployeeInfo(); 
         //cc.VacationSchedule();
-       
+
     }
 }
