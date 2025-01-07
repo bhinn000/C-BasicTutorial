@@ -25,7 +25,7 @@ namespace C_Basic
 
         public void ExamSchedule() //by default access modifier is "Private"
         {
-            Console.WriteLine("Board Exam is coming near");
+            Console.WriteLine("Student's Board Exam is coming near");
         }
 
         private void EmployeeInfo()
