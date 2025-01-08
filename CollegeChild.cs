@@ -114,7 +114,9 @@ namespace C_Basic
             mi1.Dance();
             mi2.Dance();
 
-
+            Console.WriteLine("**PROPERTY**");
+            TestProperty testProperty = new TestProperty();
+            testProperty.MainSub3();
 
         }
         //cc.EmployeeInfo(); 
