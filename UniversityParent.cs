@@ -67,7 +67,7 @@ namespace C_Basic
             Console.WriteLine("We also have transportation service");
         }
 
-        public void MainSub()
+        public void MainSub1()
         {
             Console.WriteLine("*********");
             UniversityParent up = new UniversityParent("SXC");

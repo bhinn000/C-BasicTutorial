@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -52,25 +53,44 @@ namespace C_Basic
             base.TransportInfoUsingBaseKey();
         }
 
+        
 
-        public static void Main()
+        private  static void Main() // Main function can be private too
         {
+
             CollegeChild cc = new CollegeChild("St.Xavier's");
             //cc.EmployeeInfo();// this method is private hence can't accessed with child's object
             cc.VacationSchedule();
             cc.CollegeClassShift("Morning Shift");
             cc.CollegeClassOff();
-            cc.MainSub();
+            cc.MainSub1();
             //base.TransportInfoUsingBaseKey();// "base" is not applicable in static method
             cc.TestBaseKey(); //calling function which is using 'base' key
 
-            Console.WriteLine("****Reference and Instance Concept****");
+            Console.WriteLine("**Reference and Instance Concept**");
             UniversityParent upRef;
             CollegeChild ccInst = new CollegeChild("CollegeName");
             upRef = cc;//   "upRef" : is reference of parent created using child's class , this cant access child's pure class but can access overridden method of own
             upRef.CollegeClassShift("Evening"); // is overridden method so display overridden one
             upRef.CollegeClassOff(); //shows parent output as methodHiding
-            //upRef.TestBaseKey(); // cant access child's method
+                                     //upRef.TestBaseKey(); // cant access child's method
+
+            //operator overloading
+            Console.WriteLine("**OPERATOR OVERLOADING**");
+            string name = "Ram ";
+            string surname = "Ayodhya";
+            string fullName = name + surname; //here +  is used for concatenation
+            Console.WriteLine(fullName);
+            int num1 = 1;
+            int num2 = 2;
+            int num = num1 + num2;//here +  is used for addition
+            Console.WriteLine(num);
+            //we can make custom functions for operator overloading ; --check Matrix class for this--
+            Matrix matrix1 = new Matrix(1, 2, 3, 4);
+            Matrix matrix2 = new Matrix(1, 2, 3, 4);
+            Matrix matrixResult = matrix1 + matrix2;
+            Console.WriteLine(matrixResult); // by default this gives C_Basic.Matrix now , override the method in Matrix 
+
 
         }
         //cc.EmployeeInfo(); 
