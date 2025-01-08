@@ -90,6 +90,10 @@ namespace C_Basic
             Matrix matrix2 = new Matrix(1, 2, 3, 4);
             Matrix matrixResult = matrix1 + matrix2;
             Console.WriteLine(matrixResult); // by default this gives C_Basic.Matrix now , override the method in Matrix 
+            Console.WriteLine("**ABSTRACT**");
+            FigureAbstract figureAbstract = new Circle(4);
+            Console.WriteLine(figureAbstract.GetArea());
+
 
 
         }
