@@ -93,6 +93,26 @@ namespace C_Basic
             Console.WriteLine("**ABSTRACT**");
             FigureAbstract figureAbstract = new Circle(4);
             Console.WriteLine(figureAbstract.GetArea());
+            Console.WriteLine("**INTERFACE**");
+            //ITestInterface itestInterfaceInstance = new ITestInterface(); //cant create instance of an interface
+          
+            ITestInterface itestInterfaceRef;  //but can create reference using child class instance
+            TestClass testClassInstan= new TestClass();
+            itestInterfaceRef = testClassInstan;
+            itestInterfaceRef.Display();//and can call the method
+
+            ITestInterface itestInterface = new TestClass();
+            itestInterface.Display();
+
+            Console.WriteLine("**MULTIPLE INHERITANCE**");
+            MultipleInheritClass multipleInheritClass = new MultipleInheritClass();
+            multipleInheritClass.Dance();//ambigious, due to this, for both interface's method , single implementation is being executed 
+
+            //now to access the Dance() of each interface, reference of interface has to be made
+            MultipleInheritance1 mi1 = multipleInheritClass;
+            MultipleInheritance2 mi2 = multipleInheritClass;
+            mi1.Dance();
+            mi2.Dance();
 
 
 

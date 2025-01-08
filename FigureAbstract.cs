@@ -11,7 +11,6 @@ namespace C_Basic
     {
         //public FigureAbstract() { } //no compulsion to make the "constructor of parent which is abstract" to public as it wont be used to create object ; abstract classes cant be instantiated directly
 
-
         public int width, height , radius; //variables that may be used by the methods
         public const float pi=3.14f;
         public abstract double GetArea(); //child must implement the abstract methods
