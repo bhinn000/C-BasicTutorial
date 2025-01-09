@@ -126,6 +126,10 @@ namespace C_Basic
             EmployeeDelegate employeeDelegate = new EmployeeDelegate();
             employeeDelegate.MainSub();// another way of calling this function is to use Delegate
 
+            Console.WriteLine("**MULTICAST**");
+            RectangleDelegate rectangleDelegate = new RectangleDelegate();
+            rectangleDelegate.MainSub();
+
         }
         //cc.EmployeeInfo(); 
         //cc.VacationSchedule();
