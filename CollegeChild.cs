@@ -67,7 +67,7 @@ namespace C_Basic
             //base.TransportInfoUsingBaseKey();// "base" is not applicable in static method
             cc.TestBaseKey(); //calling function which is using 'base' key
 
-            Console.WriteLine("**Reference and Instance Concept**");
+            Console.WriteLine("**\nReference and Instance Concept**");
             UniversityParent upRef;
             CollegeChild ccInst = new CollegeChild("CollegeName");
             upRef = cc;//   "upRef" : is reference of parent created using child's class , this cant access child's pure class but can access overridden method of own
@@ -76,7 +76,7 @@ namespace C_Basic
                                      //upRef.TestBaseKey(); // cant access child's method
 
             //operator overloading
-            Console.WriteLine("**OPERATOR OVERLOADING**");
+            Console.WriteLine("**\nOPERATOR OVERLOADING**");
             string name = "Ram ";
             string surname = "Ayodhya";
             string fullName = name + surname; //here +  is used for concatenation
@@ -90,10 +90,10 @@ namespace C_Basic
             Matrix matrix2 = new Matrix(1, 2, 3, 4);
             Matrix matrixResult = matrix1 + matrix2;
             Console.WriteLine(matrixResult); // by default this gives C_Basic.Matrix now , override the method in Matrix 
-            Console.WriteLine("**ABSTRACT**");
+            Console.WriteLine("**\nABSTRACT**");
             FigureAbstract figureAbstract = new Circle(4);
             Console.WriteLine(figureAbstract.GetArea());
-            Console.WriteLine("**INTERFACE**");
+            Console.WriteLine("**\nINTERFACE**");
             //ITestInterface itestInterfaceInstance = new ITestInterface(); //cant create instance of an interface
           
             ITestInterface itestInterfaceRef;  //but can create reference using child class instance
@@ -104,7 +104,7 @@ namespace C_Basic
             ITestInterface itestInterface = new TestClass();
             itestInterface.Display();
 
-            Console.WriteLine("**MULTIPLE INHERITANCE**");
+            Console.WriteLine("**\nMULTIPLE INHERITANCE**");
             MultipleInheritClass multipleInheritClass = new MultipleInheritClass();
             multipleInheritClass.Dance();//ambigious, due to this, for both interface's method , single implementation is being executed 
 
@@ -114,9 +114,13 @@ namespace C_Basic
             mi1.Dance();
             mi2.Dance();
 
-            Console.WriteLine("**PROPERTY**");
+            Console.WriteLine("**\nPROPERTY**");
             TestProperty testProperty = new TestProperty();
             testProperty.MainSub3();
+
+            Console.WriteLine("**\nPROPERTY2**");
+            TestCustomer testCustomer = new TestCustomer();
+            testCustomer.MainSub();
 
         }
         //cc.EmployeeInfo(); 
