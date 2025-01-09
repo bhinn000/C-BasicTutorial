@@ -114,13 +114,17 @@ namespace C_Basic
             mi1.Dance();
             mi2.Dance();
 
-            Console.WriteLine("**\nPROPERTY**");
+            Console.WriteLine("**\nPROPERTY1**");
             TestProperty testProperty = new TestProperty();
             testProperty.MainSub3();
 
             Console.WriteLine("**\nPROPERTY2**");
             TestCustomer testCustomer = new TestCustomer();
             testCustomer.MainSub();
+
+            Console.WriteLine("**\nDELEGATE**");
+            EmployeeDelegate employeeDelegate = new EmployeeDelegate();
+            employeeDelegate.MainSub();// another way of calling this function is to use Delegate
 
         }
         //cc.EmployeeInfo(); 

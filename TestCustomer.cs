@@ -13,7 +13,7 @@ namespace C_Basic
     {
         public void MainSub()
         {
-            Customer customer = new Customer("Client123" ,true, "Ram" , 2000 , Cities.Pokhara); //we cant use Cities.Butwal as not defined in Enum
+            Customer customer = new Customer("Client123" ,true, "Ram" , 2000 , Cities.Pokhara, "fNepal"); //we cant use Cities.Butwal as not defined in Enum
             Console.WriteLine($"Customer code is {customer.custID}");
             //customer.custID = "Client000"; //is read-only so cant modify it
             Console.WriteLine($"Original name is  is {customer.cname}");
