@@ -49,7 +49,7 @@ namespace C_Basic.Collections
 
             ArrayList al1 = new ArrayList(10);//now 10
 
-            al1 = ["Ram", "Hari", "Shyam"];
+            al1 = ["Ram", "Hari", "Shyam", true]; //any type can be sent so is "not type safe" but resizable
             Console.WriteLine("\nCapacity of al1: ", al1.Capacity);
             Console.WriteLine("\nWe have following in al1:");
             foreach (object obj in al1)
@@ -57,6 +57,17 @@ namespace C_Basic.Collections
             Console.WriteLine($"\nAt index 0 , we have {al[0]}");//in the case of ArrayList , it is key/value but key is an index
 
             //instead of this , there is "Key/value" where key is not limit to index
+            //Hashtable
+            Hashtable ht = new Hashtable(); //not type safe
+            ht.Add("Name", "Shyam");
+            ht.Add("Job", "Musician");
+            ht.Add("Location", "Gokul");
+           
+            Console.WriteLine(ht["Job"]); //we can access the value with key
+            foreach (object key in ht.Keys)
+                Console.WriteLine(key + " : " + ht[key] + "\n"); //display on the basis of hashCode
+                //Console.WriteLine(ht : ht[key] + "\n");
+
 
         }
     }
