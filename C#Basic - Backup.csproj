@@ -6,7 +6,12 @@
     <RootNamespace>C_Basic</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C_Basic.Collections.Collection1</StartupObject>
+    <StartupObject>C_Basic.ExceptionFolder.ExceptionConcept</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
 
 </Project>
