@@ -6,7 +6,7 @@
     <RootNamespace>C_Basic</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C_Basic.Collections.Collection1</StartupObject>
+    <StartupObject>C_Basic.Collections.GenericClass</StartupObject>
   </PropertyGroup>
 
 </Project>

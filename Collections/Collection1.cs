@@ -49,7 +49,7 @@ namespace C_Basic.Collections
 
             ArrayList al1 = new ArrayList(10);//now 10
 
-            al1 = ["Ram", "Hari", "Shyam", true]; //any type can be sent so is "not type safe" but resizable
+            al1 = ["Ram", "Hari", "Shyam", true]; //any type can be sent so is "not type safe" but resizable, collection(non generic)s
             Console.WriteLine("\nCapacity of al1: ", al1.Capacity);
             Console.WriteLine("\nWe have following in al1:");
             foreach (object obj in al1)
@@ -58,7 +58,7 @@ namespace C_Basic.Collections
 
             //instead of this , there is "Key/value" where key is not limit to index
             //Hashtable
-            Hashtable ht = new Hashtable(); //not type safe
+            Hashtable ht = new Hashtable(); //not type safe ; collection(non generic)
             ht.Add("Name", "Shyam");
             ht.Add("Job", "Musician");
             ht.Add("Location", "Gokul");
