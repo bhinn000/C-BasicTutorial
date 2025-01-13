@@ -6,7 +6,7 @@
     <RootNamespace>C_Basic</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C_Basic.Extension.TestExtension</StartupObject>
+    <StartupObject>C_Basic.Collections.Student</StartupObject>
   </PropertyGroup>
 
 </Project>
