@@ -6,7 +6,11 @@
     <RootNamespace>C_Basic</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C_Basic.Collections.Student</StartupObject>
+    <StartupObject>C_Basic.Program</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="LINQ\" />
+  </ItemGroup>
 
 </Project>
